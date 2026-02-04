@@ -6,95 +6,111 @@
 
 <style>
 body{
-  background:#000;
-  color:#fff;
-  font-family:Arial, sans-serif;
-  margin:0;
-  padding:0;
+ background:#000;
+ color:#fff;
+ font-family:Arial, sans-serif;
+ margin:0;
 }
 
 header{
-  padding:20px;
-  font-size:28px;
-  font-weight:bold;
-  border-bottom:1px solid #222;
+ padding:20px;
+ font-size:26px;
+ font-weight:bold;
+ border-bottom:1px solid #222;
 }
 
-.container{
-  padding:20px;
+.hero{
+ padding:30px 20px;
+}
+
+.button{
+ background:white;
+ color:black;
+ border:none;
+ padding:10px 16px;
+ border-radius:10px;
+ margin-top:10px;
+ font-weight:bold;
 }
 
 .card{
-  background:#111;
-  padding:20px;
-  margin-top:15px;
-  border-radius:12px;
+ background:#111;
+ margin:20px;
+ padding:20px;
+ border-radius:14px;
 }
 
-button{
-  background:#fff;
-  color:#000;
-  border:none;
-  padding:10px 14px;
-  margin-top:10px;
-  border-radius:8px;
-  font-weight:bold;
+.song{
+ border-top:1px solid #222;
+ padding-top:10px;
+ margin-top:10px;
 }
 
 .player{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  background:#111;
-  padding:15px;
-  border-top:1px solid #222;
+ position:fixed;
+ bottom:0;
+ left:0;
+ right:0;
+ background:#111;
+ padding:15px;
+ border-top:1px solid #222;
+ text-align:center;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-Lis Be£ Music
-</header>
+<header>Lis Be£ Music</header>
 
-<div class="container">
+<div class="hero">
+<h2>Exclusive Artist Platform</h2>
+<p>Stream Lis Be£ music or unlock premium downloads.</p>
 
-<div class="card">
-<h2>🎧 Daily Listening Pass</h2>
-<p>Unlock streaming for only <b>$0.50/day</b></p>
-<button onclick="alert('Connect Stripe or Crypto later')">
-Activate Pass
+<button class="button" onclick="dailyPass()">
+🎧 Activate $0.50 Daily Pass
 </button>
 </div>
 
 <div class="card">
-<h2>🔥 Song Library</h2>
 
-<h3>Midnight Vibes</h3>
-<button onclick="playSong()">Play</button>
-<button onclick="alert('Download purchase $10')">Buy $10</button>
+<h3>🔥 Song Library</h3>
 
-<h3>Ocean Drive</h3>
-<button onclick="playSong()">Play</button>
-<button onclick="alert('Download purchase $10')">Buy $10</button>
+<div class="song">
+<b>Midnight Vibes</b><br/>
+<button class="button" onclick="play()">Play</button>
+<button class="button" onclick="buy()">Buy Download $10</button>
+</div>
 
-<h3>No Limits</h3>
-<button onclick="playSong()">Play</button>
-<button onclick="alert('Download purchase $10')">Buy $10</button>
+<div class="song">
+<b>Ocean Drive</b><br/>
+<button class="button" onclick="play()">Play</button>
+<button class="button" onclick="buy()">Buy Download $10</button>
+</div>
 
+<div class="song">
+<b>No Limits</b><br/>
+<button class="button" onclick="play()">Play</button>
+<button class="button" onclick="buy()">Buy Download $10</button>
 </div>
 
 </div>
 
 <div class="player">
-🎵 Lis Be£ Player — Tap Play Above
+🎵 Lis Be£ Player — Elite Mode Active
 </div>
 
 <script>
-function playSong(){
-  alert("Music player will connect here 🎧");
+function dailyPass(){
+ alert("Next step: connect Stripe or Crypto payments 💳");
+}
+
+function buy(){
+ alert("Download unlock payment $10");
+}
+
+function play(){
+ alert("Music player connected soon 🎧");
 }
 </script>
 
