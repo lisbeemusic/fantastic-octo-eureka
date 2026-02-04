@@ -101,6 +101,13 @@ header{
 </div>
 
 <script>
+ function show(id){
+ document.getElementById("usdBox").style.display="none";
+ document.getElementById("nairaBox").style.display="none";
+ document.getElementById("gbpBox").style.display="none";
+ document.getElementById("eurBox").style.display="none";
+ document.getElementById(id).style.display="block";
+ }
 function dailyPass(){
  alert("Next step: connect Stripe or Crypto payments 💳");
 }
@@ -123,5 +130,44 @@ function play(){
 <button class="button" onclick="naira()">🇳🇬 Pay via Naira Account</button>
 <button class="button" onclick="pounds()">💷 Pay via GBP Account</button>
 <button class="button" onclick="euro()">💶 Pay via EUR Account</button>
+
+</div>
+<div class="card">
+<h3>💳 Bank Transfer Options</h3>
+
+<p>Select your currency and send payment to unlock music.</p>
+
+<button class="button" onclick="show('usdBox')">💵 USD Account</button>
+<button class="button" onclick="show('nairaBox')">🇳🇬 Naira Account</button>
+<button class="button" onclick="show('gbpBox')">💷 GBP Account</button>
+<button class="button" onclick="show('eurBox')">💶 EUR Account</button>
+
+<div id="usdBox" style="display:none;margin-top:15px;">
+<b>USD Account</b><br/>
+Bank: Your Bank Name<br/>
+Account Name: Lis Be£ Music<br/>
+Account Number: XXXXX
+</div>
+
+<div id="nairaBox" style="display:none;margin-top:15px;">
+<b>Naira Account</b><br/>
+Bank: Your Nigerian Bank<br/>
+Account Name: Lis Be£ Music<br/>
+Account Number: XXXXX
+</div>
+
+<div id="gbpBox" style="display:none;margin-top:15px;">
+<b>GBP Account</b><br/>
+Bank: UK Bank<br/>
+Account Name: Lis Be£ Music<br/>
+Account Number: XXXXX
+</div>
+
+<div id="eurBox" style="display:none;margin-top:15px;">
+<b>EUR Account</b><br/>
+Bank: EU Bank<br/>
+Account Name: Lis Be£ Music<br/>
+IBAN: XXXXX
+</div>
 
 </div>
